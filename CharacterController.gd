@@ -21,7 +21,9 @@ func get_input():
 	if Input.is_action_pressed('up'):
 		velocity.y -= 1
 	velocity = velocity.normalized()
+	character_to_control.set_move_target(velocity)
 
 
 func _process(delta):
+	get_input()
 	pass

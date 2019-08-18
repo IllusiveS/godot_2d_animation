@@ -10,12 +10,9 @@ var target_direciton : Vector2
 var direction : Vector2
 var h_flip = 1
 
-var horizontal_update_coroutine;
-
 func _ready():
 	target_direciton = Vector2()
 	direction = Vector2()
-	horizontal_update_coroutine = flip_horizontal()
 	pass # Replace with function body.
 
 func set_move_target(target : Vector2):
@@ -23,13 +20,12 @@ func set_move_target(target : Vector2):
 	pass
 
 func _process(delta):
-	horizontal_update_coroutine.resume(delta)
+	flip_horizontal(delta)
 	target_direciton = move_and_slide(target_direciton)
 	pass
 
-func flip_horizontal():
-	var delta = yield()
-	if direction.x > 0:
+func flip_horizontal(delta):
+	if direction.x >= 0:
 		h_flip += turn_speed * delta
 		if h_flip > 1:
 			h_flip = 1
