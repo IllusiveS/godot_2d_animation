@@ -1,21 +1,16 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Character.tscn" type="PackedScene" id=1]
-[ext_resource path="res://CharacterController.gd" type="Script" id=2]
+[ext_resource path="res://CharacterController.gd" type="Script" id=1]
+[ext_resource path="res://Character.tscn" type="PackedScene" id=2]
 
 [node name="Level" type="Node2D"]
 position = Vector2( 496.006, 259.053 )
 
-[node name="Character" parent="." instance=ExtResource( 1 )]
-position = Vector2( 64.0596, -4.20594 )
-speed = 2000
-turn_speed = 1.0
-
-[node name="Character2" parent="." instance=ExtResource( 1 )]
-position = Vector2( -64.7067, -2.9118 )
-speed = 2000
-turn_speed = 1.0
-
 [node name="PlayerCharacterController" type="Node" parent="."]
-script = ExtResource( 2 )
-character_controlled = NodePath("../Character")
+script = ExtResource( 1 )
+character_controlled = NodePath("../Node2D/Character")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Character" parent="Node2D" instance=ExtResource( 2 )]
+scale = Vector2( 1, 1 )
