@@ -1,7 +1,7 @@
 extends Node
 
 export var character_controlled : NodePath
-var character_to_control : Character
+var character_to_control
 
 var velocity = Vector2()
 
@@ -20,6 +20,8 @@ func get_input():
 		velocity.y += 1
 	if Input.is_action_pressed('ui_up'):
 		velocity.y -= 1
+	if Input.is_action_pressed('ui_select'):
+		character_to_control.begin_talking()
 	velocity = velocity.normalized()
 	character_to_control.set_move_target(velocity)
 
