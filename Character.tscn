@@ -1,11 +1,12 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Scripts/Character.gd" type="Script" id=1]
 [ext_resource path="res://CompiledAssets/HandPartTemplate.png" type="Texture" id=2]
 [ext_resource path="res://CompiledAssets/BodyTemplate.png" type="Texture" id=3]
-[ext_resource path="res://CompiledAssets/HeadTemplate.png" type="Texture" id=4]
+[ext_resource path="res://CompiledAssets/NormalHead.png" type="Texture" id=4]
 [ext_resource path="res://CompiledAssets/HandTemplate.png" type="Texture" id=5]
 [ext_resource path="res://CompiledAssets/FeetTemplate.png" type="Texture" id=6]
+[ext_resource path="res://CompiledAssets/Eye.png" type="Texture" id=7]
 
 [sub_resource type="Animation" id=1]
 length = 0.5
@@ -489,6 +490,135 @@ tracks/13/keys = {
 }
 
 [sub_resource type="Animation" id=5]
+resource_name = "Look"
+length = 2.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Skeleton/Hip/Chest/Spine/Head/LEye:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 14.8433, -0.25, 0, 0.25, 0, 12.9143, -0.25, 0, 0.25, 0, 12.9143, -0.25, 0, 0.25, 0, 12.9143, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.001, 1, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Skeleton/Hip/Chest/Spine/Head/LEye:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 3.155, -0.25, 0, 0.25, 0, 3.15512, -0.25, 0, 0.25, 0, 3.15512, -0.25, 0, 0.25, 0, 3.15512, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.001, 1, 2 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Skeleton/Hip/Chest/Spine/Head/LEye:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8, 1, 1.2, 2 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Skeleton/Hip/Chest/Spine/Head/REye:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 14.8973, -0.25, 0, 0.25, 0, 13.2382, -0.25, 0, 0.25, 0, 13.2382, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.001, 2 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Skeleton/Hip/Chest/Spine/Head/REye:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( -1.93517, -0.25, 0, 0.25, 0, -1.91072, -0.25, 0, 0.25, 0, -1.91072, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.001, 2 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("Skeleton/Hip/Chest/Spine/Head/REye:scale:x")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1e-005, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8, 1, 1.2, 2 )
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "LookUp"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Skeleton/Hip/Chest/Spine/Head/LEye:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 14.8433, -0.25, 0, 0.25, 0, 14.8433, -0.25, 0, 0.25, 0, 14.8433, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Skeleton/Hip/Chest/Spine/Head/LEye:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 3.14748, -0.25, 0, 0.25, 0, 3.14748, -0.25, 0, 0.25, 0, 3.14748, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Skeleton/Hip/Chest/Spine/Head/LEye:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8, 1, 1.2, 2 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Skeleton/Hip/Chest/Spine/Head/REye:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 14.8973, -0.25, 0, 0.25, 0, 14.8973, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Skeleton/Hip/Chest/Spine/Head/REye:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( -1.93517, -0.25, 0, 0.25, 0, -1.93517, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("Skeleton/Hip/Chest/Spine/Head/REye:scale:x")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1e-005, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8, 1, 1.2, 2 )
+}
+
+[sub_resource type="Animation" id=7]
 length = 2.0
 loop = true
 tracks/0/type = "bezier"
@@ -748,7 +878,7 @@ tracks/23/keys = {
 "values": [ -87.7542, -93.5972, -88.8013, -83.9866, -87.7542 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=8]
 loop = true
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("Skeleton/Hip/LLeg:position:x")
@@ -847,77 +977,91 @@ tracks/8/keys = {
 "values": [ -87.7542, -87.7542, -87.7542 ]
 }
 
-[sub_resource type="AnimationNodeBlend2" id=7]
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "Look"
+
+[sub_resource type="AnimationNodeBlend2" id=10]
 filter_enabled = true
 filters = [ "Skeleton/Hip/LLeg:position:x", "Skeleton/Hip/LLeg:position:y", "Skeleton/Hip/LLeg:rotation_degrees", "Skeleton/Hip/RLeg:position:x", "Skeleton/Hip/RLeg:position:y", "Skeleton/Hip/RLeg:rotation_degrees" ]
 
-[sub_resource type="AnimationNodeAnimation" id=8]
-animation = "Idle"
-
-[sub_resource type="AnimationNodeAnimation" id=9]
-animation = "Walk"
-
-[sub_resource type="AnimationNodeBlendSpace1D" id=10]
-blend_point_0/node = SubResource( 8 )
-blend_point_0/pos = 0.0
-blend_point_1/node = SubResource( 9 )
-blend_point_1/pos = 1.0
-min_space = 0.0
-
-[sub_resource type="AnimationNodeAnimation" id=11]
-animation = "DmgTaken"
+[sub_resource type="AnimationNodeBlend2" id=11]
+filter_enabled = true
+filters = [ "Skeleton/Hip/Chest/Spine/Head/LEye:position:x", "Skeleton/Hip/Chest/Spine/Head/LEye:position:y", "Skeleton/Hip/Chest/Spine/Head/LEye:scale:x", "Skeleton/Hip/Chest/Spine/Head/REye:position:x", "Skeleton/Hip/Chest/Spine/Head/REye:position:y", "Skeleton/Hip/Chest/Spine/Head/REye:scale:x" ]
 
 [sub_resource type="AnimationNodeAnimation" id=12]
 animation = "Idle"
 
 [sub_resource type="AnimationNodeAnimation" id=13]
+animation = "Walk"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id=14]
+blend_point_0/node = SubResource( 12 )
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource( 13 )
+blend_point_1/pos = 1.0
+min_space = 0.0
+
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "DmgTaken"
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "Idle"
+
+[sub_resource type="AnimationNodeAnimation" id=17]
 animation = "Talking"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=14]
+[sub_resource type="AnimationNodeStateMachineTransition" id=18]
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=15]
+[sub_resource type="AnimationNodeStateMachineTransition" id=19]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=16]
+[sub_resource type="AnimationNodeStateMachineTransition" id=20]
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=17]
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
 
-[sub_resource type="AnimationNodeStateMachine" id=18]
-states/DmgTaken/node = SubResource( 11 )
+[sub_resource type="AnimationNodeStateMachine" id=22]
+states/DmgTaken/node = SubResource( 15 )
 states/DmgTaken/position = Vector2( 634, 360 )
-states/Idle/node = SubResource( 12 )
+states/Idle/node = SubResource( 16 )
 states/Idle/position = Vector2( 379, 360 )
-states/Talking/node = SubResource( 13 )
+states/Talking/node = SubResource( 17 )
 states/Talking/position = Vector2( 173, 360 )
-transitions = [ "DmgTaken", "Idle", SubResource( 14 ), "Idle", "DmgTaken", SubResource( 15 ), "Talking", "Idle", SubResource( 16 ), "Idle", "Talking", SubResource( 17 ) ]
+transitions = [ "DmgTaken", "Idle", SubResource( 18 ), "Idle", "DmgTaken", SubResource( 19 ), "Talking", "Idle", SubResource( 20 ), "Idle", "Talking", SubResource( 21 ) ]
 start_node = "Idle"
 graph_offset = Vector2( -101, 193 )
 
-[sub_resource type="AnimationNodeBlendTree" id=19]
-graph_offset = Vector2( -227, 189.5 )
-nodes/Blend2/node = SubResource( 7 )
-nodes/Blend2/position = Vector2( 258, 254.1 )
-nodes/Movement/node = SubResource( 10 )
+[sub_resource type="AnimationNodeBlendTree" id=23]
+graph_offset = Vector2( -106, 259.5 )
+nodes/Animation/node = SubResource( 9 )
+nodes/Animation/position = Vector2( 300, 460 )
+nodes/Default/node = SubResource( 10 )
+nodes/Default/position = Vector2( 258, 254.1 )
+nodes/EyesBlend/node = SubResource( 11 )
+nodes/EyesBlend/position = Vector2( 560, 320 )
+nodes/Movement/node = SubResource( 14 )
 nodes/Movement/position = Vector2( -20, 340 )
-nodes/StateMachine/node = SubResource( 18 )
+nodes/StateMachine/node = SubResource( 22 )
 nodes/StateMachine/position = Vector2( -20, 160 )
-nodes/output/position = Vector2( 460, 260 )
-node_connections = [ "output", 0, "Blend2", "Blend2", 0, "StateMachine", "Blend2", 1, "Movement" ]
+nodes/output/position = Vector2( 780, 260 )
+node_connections = [ "output", 0, "EyesBlend", "EyesBlend", 0, "Default", "EyesBlend", 1, "Animation", "Default", 0, "StateMachine", "Default", 1, "Movement" ]
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=20]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=24]
 
-[sub_resource type="CapsuleShape2D" id=21]
+[sub_resource type="CapsuleShape2D" id=25]
 radius = 20.4726
-height = 64.0573
+height = 5.32301
+
+[sub_resource type="OccluderPolygon2D" id=26]
+polygon = PoolVector2Array( -1.08046, 63.7415, 10.8109, 62.3146, 17.4701, 56.8445, 19.3727, 44.2397, 17.9458, 37.5805, 14.6162, 33.7752, 3.43827, 32.3483, -8.69093, 35.6779, -17.9662, 37.5805, -22.7228, 45.4288, -27.4793, 52.3258, -28.4306, 61.3632, -18.9175, 63.9794, -8.45311, 64.6928 )
 
 [node name="Character" type="KinematicBody2D"]
 scale = Vector2( -1, 1 )
 script = ExtResource( 1 )
-speed = 100
-turn_speed = 15.0
+speed = 200
+turn_speed = 10.0
 
 [node name="Polygons" type="Node2D" parent="."]
 editor/display_folded = true
@@ -1034,6 +1178,26 @@ polygon = PoolVector2Array( 36.25, 41.5, 40.5, 41.25, 42.5, 39, 43.5, 34.5, 43.5
 uv = PoolVector2Array( 36.25, 41.5, 40.5, 41.25, 42.5, 39, 43.5, 34.5, 43.5, 29.25, 42.5, 25.25, 37.75, 24.5, 29.75, 24.5, 24.75, 27.5, 19, 31.5, 16.5, 34, 16.25, 36.75, 16.25, 40.25, 20.25, 41.75 )
 bones = [ NodePath("Hip"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Hip/Chest"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Hip/Chest/Bone2D"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Hip/Chest/Bone2D/Head"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Hip/Chest/RArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Hip/Chest/RArm/RArmLower"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Hip/Chest/RArm/RArmLower/RHand"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Hip/Chest/LArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Hip/Chest/LArm/LArmLower"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Hip/Chest/LArm/LArmLower/LHand"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Hip/LLeg"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Hip/LLeg/LFeet"), PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ), NodePath("Hip/LLeg/LFeet/LFrontFeet"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Hip/RLeg"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Hip/RLeg/RFeet"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Hip/RLeg/RFeet/RFrontFeet"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
 
+[node name="LEye" type="Polygon2D" parent="Polygons"]
+position = Vector2( 7.08987, -45.6803 )
+scale = Vector2( 0.1, 0.1 )
+color = Color( 0.14902, 0.235294, 0.533333, 1 )
+texture = ExtResource( 7 )
+skeleton = NodePath("../../Skeleton")
+polygon = PoolVector2Array( -0.25, 0, -0.5, 16, 15.75, 15.75, 15.75, 0 )
+uv = PoolVector2Array( -0.25, 0, -0.5, 16, 15.75, 15.75, 15.75, 0 )
+bones = [ NodePath("Hip"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/Chest"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/Chest/Spine"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/Chest/Spine/Head"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/Chest/Spine/Head/LEye"), PoolRealArray( 0.97, 0.97, 0.97, 0.97 ), NodePath("Hip/Chest/Spine/Head/REye"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/Chest/RArm"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/Chest/RArm/RArmLower"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/Chest/RArm/RArmLower/RHand"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/Chest/LArm"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/Chest/LArm/LArmLower"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/Chest/LArm/LArmLower/LHand"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/LLeg"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/LLeg/LFeet"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/LLeg/LFeet/LFrontFeet"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/RLeg"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/RLeg/RFeet"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/RLeg/RFeet/RFrontFeet"), PoolRealArray( 0, 0, 0, 0 ) ]
+
+[node name="REye" type="Polygon2D" parent="Polygons"]
+position = Vector2( -6.85231, -45.8016 )
+scale = Vector2( 0.1, 0.1 )
+color = Color( 0.14902, 0.235294, 0.533333, 1 )
+texture = ExtResource( 7 )
+skeleton = NodePath("../../Skeleton")
+polygon = PoolVector2Array( 0, 0.348432, 16.0279, 0.348432, 16.3763, 15.331, 0, 15.6794 )
+uv = PoolVector2Array( 0, 0.348432, 16.0279, 0.348432, 16.3763, 15.331, 0, 15.6794 )
+bones = [ NodePath("Hip"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/Chest"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/Chest/Spine"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/Chest/Spine/Head"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/Chest/Spine/Head/LEye"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/Chest/Spine/Head/REye"), PoolRealArray( 0.97, 0.97, 0.97, 0.97 ), NodePath("Hip/Chest/RArm"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/Chest/RArm/RArmLower"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/Chest/RArm/RArmLower/RHand"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/Chest/LArm"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/Chest/LArm/LArmLower"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/Chest/LArm/LArmLower/LHand"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/LLeg"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/LLeg/LFeet"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/LLeg/LFeet/LFrontFeet"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/RLeg"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/RLeg/RFeet"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Hip/RLeg/RFeet/RFrontFeet"), PoolRealArray( 0, 0, 0, 0 ) ]
+
 [node name="Skeleton" type="Skeleton2D" parent="."]
 editor/display_folded = true
 position = Vector2( -0.631111, -1.10446 )
@@ -1043,8 +1207,8 @@ position = Vector2( -0.946671, 20.8269 )
 rest = Transform2D( 1, 0, 0, 1, -0.946671, 20.8269 )
 
 [node name="Chest" type="Bone2D" parent="Skeleton/Hip"]
-position = Vector2( -0.197294, -14.0899 )
-rotation = -1.57131
+position = Vector2( -0.50448, -13.3878 )
+rotation = -1.58705
 scale = Vector2( 2.46143, 2.63811 )
 rest = Transform2D( 0.0964532, -2.45954, 2.63608, 0.103376, 0.3013, -15.2296 )
 
@@ -1052,14 +1216,27 @@ rest = Transform2D( 0.0964532, -2.45954, 2.63608, 0.103376, 0.3013, -15.2296 )
 rest = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="Head" type="Bone2D" parent="Skeleton/Hip/Chest/Spine"]
-position = Vector2( 9.63533, -0.421544 )
-rotation = 0.00403371
+position = Vector2( 9.20142, -0.523219 )
+rotation = 0.0175078
 scale = Vector2( 0.724244, 1.02827 )
-rest = Transform2D( 0.723919, -0.0217064, 0.0308183, 1.02781, 10.3396, -0.256515 )
+rest = Transform2D( 0.723919, -0.0217064, 0.0308184, 1.02781, 10.3396, -0.256515 )
+
+[node name="LEye" type="Bone2D" parent="Skeleton/Hip/Chest/Spine/Head"]
+position = Vector2( 12.9143, 3.15512 )
+scale = Vector2( 0.0492404, 1 )
+rest = Transform2D( 1, 0, 0, 1, 13.3239, 3.17978 )
+default_length = 1.0
+
+[node name="REye" type="Bone2D" parent="Skeleton/Hip/Chest/Spine/Head"]
+position = Vector2( 13.2382, -1.91072 )
+scale = Vector2( 0.0492499, 1 )
+rest = Transform2D( 1, 0, 0, 1, 13.413, -1.91473 )
+default_length = 1.0
 
 [node name="RArm" type="Bone2D" parent="Skeleton/Hip/Chest"]
+editor/display_folded = true
 position = Vector2( 8.16078, -8.5005 )
-rotation = 3.12994
+rotation = 3.13977
 rest = Transform2D( -0.999335, 0.0364656, -0.0364656, -0.999335, 8.16078, -8.5005 )
 __meta__ = {
 "_edit_bone_": true,
@@ -1084,8 +1261,9 @@ __meta__ = {
 }
 
 [node name="LArm" type="Bone2D" parent="Skeleton/Hip/Chest"]
+editor/display_folded = true
 position = Vector2( 7.92938, 10.3414 )
-rotation = 3.22283
+rotation = 3.16519
 rest = Transform2D( -0.999892, 0.0146686, -0.0146686, -0.999892, 7.92938, 10.3414 )
 __meta__ = {
 "_edit_bone_": true,
@@ -1109,6 +1287,7 @@ __meta__ = {
 }
 
 [node name="LLeg" type="Bone2D" parent="Skeleton/Hip"]
+editor/display_folded = true
 position = Vector2( 12.0203, 5.29725 )
 rotation = 1.56334
 scale = Vector2( 2.46178, 2.63778 )
@@ -1126,6 +1305,7 @@ rest = Transform2D( 0.999982, -0.00595484, 0.00595484, 0.999982, 3.55309, -0.348
 default_length = 2.0
 
 [node name="RLeg" type="Bone2D" parent="Skeleton/Hip"]
+editor/display_folded = true
 position = Vector2( -9.11102, 4.15219 )
 rotation = 1.5581
 scale = Vector2( 2.46186, 2.6377 )
@@ -1147,17 +1327,23 @@ anims/DmgTaken = SubResource( 1 )
 anims/FlipLeft = SubResource( 2 )
 anims/FlipRight = SubResource( 3 )
 anims/Idle = SubResource( 4 )
-anims/Talking = SubResource( 5 )
-anims/Walk = SubResource( 6 )
+anims/Look = SubResource( 5 )
+anims/LookUp = SubResource( 6 )
+anims/Talking = SubResource( 7 )
+anims/Walk = SubResource( 8 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 19 )
+tree_root = SubResource( 23 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/Blend2/blend_amount = 1.0
+parameters/Default/blend_amount = 1.0
+parameters/EyesBlend/blend_amount = 1.0
 parameters/Movement/blend_position = 0.0
-parameters/StateMachine/playback = SubResource( 20 )
+parameters/StateMachine/playback = SubResource( 24 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 3.2119 )
-shape = SubResource( 21 )
+position = Vector2( -1.12968, 43.2027 )
+shape = SubResource( 25 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 26 )

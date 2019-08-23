@@ -1,16 +1,51 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/CharacterController.gd" type="Script" id=1]
-[ext_resource path="res://Character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://CompiledAssets/background/wood.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Crowd.gd" type="Script" id=3]
+[ext_resource path="res://Character.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Torch.tscn" type="PackedScene" id=5]
 
 [node name="Level" type="Node2D"]
 position = Vector2( 496.006, 259.053 )
 
 [node name="PlayerCharacterController" type="Node" parent="."]
 script = ExtResource( 1 )
-character_controlled = NodePath("../Node2D/Character")
+character_controlled = NodePath("../YSort/Character")
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="wood" type="Sprite" parent="."]
+position = Vector2( 41.9987, 29.5108 )
+scale = Vector2( 6.19221, 3.53209 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 200, 200 )
 
-[node name="Character" parent="Node2D" instance=ExtResource( 2 )]
+[node name="YSort" type="YSort" parent="."]
+script = ExtResource( 3 )
+
+[node name="Character" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( -25.8176, -97.5897 )
 scale = Vector2( 1, 1 )
+
+[node name="Crowd" parent="YSort" groups=[
+"crowd",
+] instance=ExtResource( 4 )]
+position = Vector2( -298.889, -184.361 )
+
+[node name="Crowd2" parent="YSort" groups=[
+"crowd",
+] instance=ExtResource( 4 )]
+position = Vector2( -271.654, -24.4418 )
+
+[node name="Crowd3" parent="YSort" groups=[
+"crowd",
+] instance=ExtResource( 4 )]
+position = Vector2( -337.298, 28.6319 )
+
+[node name="Crowd4" parent="YSort" groups=[
+"crowd",
+] instance=ExtResource( 4 )]
+position = Vector2( -201.82, -27.9335 )
+scale = Vector2( 1, 1 )
+
+[node name="Torch" parent="." instance=ExtResource( 5 )]

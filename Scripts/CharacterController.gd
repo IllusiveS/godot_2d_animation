@@ -5,10 +5,9 @@ var character_to_control
 
 var velocity = Vector2()
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	character_to_control = get_node(character_controlled)
-	pass # Replace with function body.
+	pass
 
 func get_input():
 	velocity = Vector2()

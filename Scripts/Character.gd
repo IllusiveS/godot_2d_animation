@@ -1,3 +1,5 @@
+class_name Character
+
 extends KinematicBody2D
 
 export var speed : int
@@ -13,7 +15,7 @@ var target_h_flip = 1
 func _ready():
 	target_direciton = Vector2()
 	direction = Vector2()
-	pass # Replace with function body.
+	pass
 
 func set_move_target(target : Vector2):
 	target_direciton = target * speed
