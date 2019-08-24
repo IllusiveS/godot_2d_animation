@@ -7,6 +7,7 @@ export var turn_speed : float
 
 onready var animation_tree = $AnimationTree
 onready var state_machine = animation_tree["parameters/StateMachine/playback"]
+
 var target_direciton : Vector2
 var direction : Vector2
 var h_flip = 1
@@ -49,7 +50,6 @@ func flip_horizontal(delta):
 		if h_flip < -1:
 			h_flip = -1
 	
-	print(h_flip)
 	$"Polygons".scale.x = h_flip
 	$"Skeleton".scale.x = h_flip
 	pass
